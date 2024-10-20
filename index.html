@@ -6,46 +6,73 @@
   <title>Aswin Pavithran - Cybersecurity Portfolio</title>
   <style>
     /* Global Styles */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #1a1a2e;
-      color: #e0e0e0;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
     }
 
     /* Header Styles */
     header {
-      background-color: #0f3460;
+      background-color: #161b22;
       padding: 20px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
     header h1 {
-      margin: 0;
       font-size: 2.5rem;
+      color: #58a6ff;
+      margin-bottom: 5px;
+    }
+
+    nav {
+      margin-top: 10px;
     }
 
     nav a {
-      color: #e0e0e0;
+      color: #c9d1d9;
       margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #58a6ff;
     }
 
     /* Section Styles */
     section {
-      padding: 40px;
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #161b22;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
     }
 
-    h2 {
-      color: #e94560;
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #58a6ff;
+      border-bottom: 2px solid #30363d;
+      padding-bottom: 8px;
+    }
+
+    section p, ul {
+      font-size: 1.1rem;
+      line-height: 1.8;
     }
 
     ul {
@@ -53,36 +80,61 @@
       padding: 0;
     }
 
-    li {
-      margin-bottom: 10px;
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    /* Button Styles */
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #58a6ff;
+      color: #161b22;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    a.button:hover {
+      background-color: #1f6feb;
     }
 
     /* Footer Styles */
     footer {
       text-align: center;
-      padding: 10px;
-      background-color: #0f3460;
+      padding: 15px;
+      background-color: #161b22;
+      color: #c9d1d9;
       position: fixed;
       bottom: 0;
       width: 100%;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
     }
 
-    /* Links Styling */
-    a {
-      color: #e94560;
-      text-decoration: none;
-    }
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
 
-    a:hover {
-      text-decoration: underline;
+      section {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to My Portfolio</h1>
+    <h1>Aswin Pavithran</h1>
     <nav>
-      <a href="#about">About Me</a>
+      <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#certifications">Certifications</a>
       <a href="#profiles">Profiles</a>
@@ -92,15 +144,17 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I am <strong>Aswin Pavithran</strong>, passionate about cybersecurity. I enjoy participating in Capture The Flag (CTF) challenges and exploring ethical hacking.</p>
+    <p>
+      Hello! I am <strong>Aswin Pavithran</strong>, a cybersecurity enthusiast passionate about ethical hacking and Capture The Flag (CTF) competitions. I am currently exploring advanced topics in cybersecurity and improving my problem-solving skills.
+    </p>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
     <ul>
-      <li>Tools: PyPhisher, nmap</li>
+      <li>Tools: PyPhisher, Nmap, Burp Suite</li>
       <li>Programming: Python</li>
-      <li>OS: Kali Linux</li>
+      <li>Operating Systems: Kali Linux, Ubuntu</li>
     </ul>
   </section>
 
@@ -116,8 +170,12 @@
   <section id="profiles">
     <h2>Profiles</h2>
     <ul>
-      <li><a href="https://github.com/AswinPavithran000/AswinPavithran.github.io/blob/main/images/HTB%20Academy%20Student%20Transcript.pdf" target="_blank">Hack The Box Profile</a></li>
-      <li><a href="https://github.com/AswinPavithran000/AswinPavithran000.github.io/blob/main/images/Screenshot%202024-10-20%20220018.png?raw=true" target="_blank">TryHackMe Profile</a></li>
+      <li>
+        <a class="button" href="https://github.com/AswinPavithran000/AswinPavithran.github.io/blob/main/images/HTB%20Academy%20Student%20Transcript.pdf" target="_blank">Hack The Box Profile</a>
+      </li>
+      <li>
+        <a class="button" href="https://github.com/AswinPavithran000/AswinPavithran.github.io/blob/main/images/Screenshot%202024-10-20%20220018.png" target="_blank">TryHackMe Profile</a>
+      </li>
     </ul>
   </section>
 
